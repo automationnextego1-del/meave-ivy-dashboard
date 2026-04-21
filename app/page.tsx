@@ -38,6 +38,22 @@ const MOCK_DATA = {
     { time: 'Yesterday', bot: 'CRO Expert', message: 'Homepage audit complete. 9 actionable recommendations identified.', type: 'warning' },
     { time: 'Yesterday', bot: 'Meta Ads', message: 'V2 Identity New confirmed winner: CTR 3.9%, CPC €1.26. V5 Quality & V6 Question paused.', type: 'success' },
   ],
+  products: {
+    recommendations: [
+      { id: 1, title: 'Floral Wrap Midi Dress', reason: 'Trending in UK fashion this week. Similar to your bestselling Isadora Wrap.', source: 'Product Scout', margin: '2.8x', category: 'Dress', priority: 'high', babyboo_price: 89.95, suggested_price: 109.95 },
+      { id: 2, title: 'Satin Slip Maxi Dress', reason: 'Satin category performing well. V3 DPA ad shows strong interest in satin products.', source: 'Product Scout', margin: '2.4x', category: 'Dress', priority: 'high', babyboo_price: 74.95, suggested_price: 94.95 },
+      { id: 3, title: 'Structured Blazer Dress', reason: 'UK consumer data shows blazer dresses trending for autumn. Low competition in catalog.', source: 'Atlas', margin: '3.1x', category: 'Dress', priority: 'medium', babyboo_price: 119.95, suggested_price: 149.95 },
+      { id: 4, title: 'Ruched Bodycon Mini', reason: 'Occasion wear performing well. Complements existing maxi range with shorter option.', source: 'Product Scout', margin: '2.6x', category: 'Dress', priority: 'medium', babyboo_price: 59.95, suggested_price: 79.95 },
+      { id: 5, title: 'Lace Detail Corset Top', reason: 'Corset detail sells well in your catalog. Top as separate item increases basket size.', source: 'Atlas', margin: '2.2x', category: 'Top', priority: 'low', babyboo_price: 44.95, suggested_price: 59.95 },
+    ],
+    bestsellers: [
+      { title: 'Calanthe Pleated Satin Maxi — Plum', orders: 4, revenue: 559.80, trend: 'up' },
+      { title: 'The Isadora Wrap Mini Dress', orders: 3, revenue: 269.85, trend: 'up' },
+      { title: 'Maliyah Maxi Dress — Khaki', orders: 2, revenue: 299.90, trend: 'stable' },
+      { title: 'Floral Appliqué Corset Maxi', orders: 2, revenue: 259.90, trend: 'stable' },
+      { title: 'Sian Maxi Dress — Burgundy', orders: 1, revenue: 129.95, trend: 'down' },
+    ]
+  },
   knowledge: {
     last_updated: '21-4-2026',
     foundation: 'Eugene Schwartz — Breakthrough Advertising',
@@ -81,7 +97,7 @@ export default function Dashboard() {
   const pendingHigh = actions.filter(a => !a.done && a.urgency === 'high').length
   const totalDone = actions.filter(a => a.done).length
 
-  const tabs = ['overview', 'ads', 'actions', 'bots', 'feed', 'knowledge']
+  const tabs = ['overview', 'ads', 'actions', 'bots', 'feed', 'knowledge', 'products']
 
   return (
     <div className="min-h-screen bg-[#080808] text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -489,6 +505,100 @@ export default function Dashboard() {
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-emerald-400"></div>
                         <p className="text-white/40 text-xs">{topic}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+
+        {/* PRODUCTS */}
+        {activeTab === 'products' && (
+          <div className="space-y-6">
+            <div className="grid grid-cols-3 gap-6">
+              <div className="col-span-2 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-white/40 text-xs tracking-widest uppercase">Product Recommendations</h2>
+                  <p className="text-white/20 text-xs">Ranked by priority & margin</p>
+                </div>
+                {data.products.recommendations.map((product, i) => (
+                  <div key={i} className={`p-5 border rounded ${
+                    product.priority === 'high' ? 'bg-[#c9a96e]/5 border-[#c9a96e]/20' :
+                    product.priority === 'medium' ? 'bg-white/[0.03] border-white/[0.08]' :
+                    'bg-white/[0.02] border-white/[0.05]'
+                  }`}>
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <p className="text-white/80 text-sm font-medium">{product.title}</p>
+                        <p className="text-white/30 text-xs mt-0.5">{product.category} · {product.source}</p>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className={`text-xs px-2 py-1 rounded ${
+                          product.priority === 'high' ? 'bg-[#c9a96e]/20 text-[#c9a96e]' :
+                          product.priority === 'medium' ? 'bg-white/10 text-white/40' :
+                          'bg-white/5 text-white/20'
+                        }`}>{product.priority.toUpperCase()}</span>
+                        <span className="text-xs px-2 py-1 rounded bg-emerald-500/10 text-emerald-400">{product.margin} margin</span>
+                      </div>
+                    </div>
+                    <p className="text-white/30 text-xs mb-3">{product.reason}</p>
+                    <div className="flex gap-6 text-xs">
+                      <div>
+                        <p className="text-white/20 mb-0.5">Babyboo price</p>
+                        <p className="text-white/50">£{product.babyboo_price}</p>
+                      </div>
+                      <div>
+                        <p className="text-white/20 mb-0.5">Suggested price</p>
+                        <p className="text-[#c9a96e]">£{product.suggested_price}</p>
+                      </div>
+                      <div>
+                        <p className="text-white/20 mb-0.5">Margin</p>
+                        <p className="text-emerald-400">{product.margin}x</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h2 className="text-xs tracking-widest uppercase text-white/40 mb-4">Bestsellers</h2>
+                  <div className="space-y-3">
+                    {data.products.bestsellers.map((product, i) => (
+                      <div key={i} className="py-2 border-b border-white/[0.04]">
+                        <div className="flex items-center justify-between mb-1">
+                          <p className="text-white/50 text-xs truncate flex-1 mr-2">{product.title}</p>
+                          <span className={`text-xs ${
+                            product.trend === 'up' ? 'text-emerald-400' :
+                            product.trend === 'down' ? 'text-red-400' :
+                            'text-white/20'
+                          }`}>{product.trend === 'up' ? '↑' : product.trend === 'down' ? '↓' : '→'}</span>
+                        </div>
+                        <div className="flex gap-4 text-xs">
+                          <p className="text-white/20">{product.orders} orders</p>
+                          <p className="text-white/40">£{product.revenue.toFixed(2)}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h2 className="text-xs tracking-widest uppercase text-white/40 mb-4">Scout Settings</h2>
+                  <div className="space-y-2">
+                    {[
+                      { label: 'Min margin', value: '2.21x' },
+                      { label: 'Focus', value: "Women's fashion" },
+                      { label: 'Source', value: 'Babyboo + UK retailers' },
+                      { label: 'Runs', value: 'Every Friday 10:00' },
+                      { label: 'Reports to', value: '#meave-ivy-products' },
+                    ].map((item, i) => (
+                      <div key={i} className="flex justify-between py-1.5 border-b border-white/[0.04]">
+                        <p className="text-white/20 text-xs">{item.label}</p>
+                        <p className="text-white/50 text-xs">{item.value}</p>
                       </div>
                     ))}
                   </div>
