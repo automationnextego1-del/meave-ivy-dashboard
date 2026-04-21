@@ -203,7 +203,7 @@ export default function Dashboard() {
                   )
                 })}
             </div>
-            {data?.ga4?.top_pages?.length > 0 && (
+            {((data?.ga4?.top_pages?.length ?? 0) > 0) && (
               <div className="mt-6">
                 <p className="text-white/20 text-xs tracking-wider uppercase mb-3">Top pages</p>
                 <div className="space-y-2">
