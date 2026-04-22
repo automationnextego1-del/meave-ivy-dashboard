@@ -69,13 +69,14 @@ type Action = typeof MOCK_DATA.actions[0]
 
 export default function Dashboard() {
   const [data, setData] = useState(MOCK_DATA)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const fetchData = async () => {
       try {
         const res = await fetch(
-          'https://raw.githubusercontent.com/automationnextego1-del/meave-ivy-dashboard/main/public/data.json',
-          { cache: 'no-store' }
+          'https://raw.githubusercontent.com/automationnextego1-del/meave-ivy-dashboard/main/public/data.json'
         )
         const json = await res.json()
         if (json && json.updated_at) setData(json)
@@ -87,6 +88,8 @@ export default function Dashboard() {
     const interval = setInterval(fetchData, 300000)
     return () => clearInterval(interval)
   }, [])
+
+  if (!mounted) return null
   const [activeTab, setActiveTab] = useState('overview')
   const [actions, setActions] = useState(data.actions)
   const [filter, setFilter] = useState('all')
