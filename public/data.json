@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-04-22T10:37:44.564459",
+  "updated_at": "2026-04-22T11:04:23.597655",
   "meta": {
-    "spend": 0.0,
+    "spend": 73.98,
     "ctr": 0.0,
     "cpc": 0.0,
-    "roas": 0,
+    "roas": 0.0,
     "impressions": 0,
     "clicks": 0,
-    "campaigns": 1,
+    "campaigns": 5,
     "ads_active": 6
   },
   "ads": {
@@ -20,10 +20,210 @@
         "roas": 0.0,
         "days": 6,
         "ads": []
+      },
+      {
+        "name": "Meave & Ivy - Sales - Apr 2026",
+        "spend": 73.98,
+        "ctr": 3.021978,
+        "cpc": 2.241818,
+        "roas": 0.0,
+        "days": 0,
+        "ads": [
+          {
+            "ad_id": "6956090917107",
+            "ad_name": "V3 - Transformation",
+            "status": "ACTIVE",
+            "spend": 3.18,
+            "impressions": 45,
+            "clicks": 2,
+            "ctr": 4.444444,
+            "cpc": 1.59
+          },
+          {
+            "ad_id": "6956950286707",
+            "ad_name": "V5 - Schwartz Transformation",
+            "status": "ACTIVE",
+            "spend": 6.99,
+            "impressions": 107,
+            "clicks": 4,
+            "ctr": 3.738318,
+            "cpc": 1.7475
+          },
+          {
+            "ad_id": "6956090877307",
+            "ad_name": "V2 - Identity New",
+            "status": "ACTIVE",
+            "spend": 12.58,
+            "impressions": 244,
+            "clicks": 9,
+            "ctr": 3.688525,
+            "cpc": 1.397778
+          },
+          {
+            "ad_id": "6956090950307",
+            "ad_name": "V4 - Occasion",
+            "status": "ACTIVE",
+            "spend": 8.32,
+            "impressions": 106,
+            "clicks": 3,
+            "ctr": 2.830189,
+            "cpc": 2.773333
+          },
+          {
+            "ad_id": "6956950440307",
+            "ad_name": "V6 - Schwartz Social Proof",
+            "status": "ACTIVE",
+            "spend": 4.8,
+            "impressions": 55,
+            "clicks": 3,
+            "ctr": 5.454545,
+            "cpc": 1.6
+          },
+          {
+            "ad_id": "6956090843307",
+            "ad_name": "V1 - Identity Original",
+            "status": "ACTIVE",
+            "spend": 17.52,
+            "impressions": 234,
+            "clicks": 8,
+            "ctr": 3.418803,
+            "cpc": 2.19
+          },
+          {
+            "ad_id": "6956091060707",
+            "ad_name": "V6 - Question",
+            "status": "PAUSED",
+            "spend": 6.14,
+            "impressions": 53,
+            "clicks": 1,
+            "ctr": 1.886792,
+            "cpc": 6.14
+          },
+          {
+            "ad_id": "6956091010307",
+            "ad_name": "V5 - Quality",
+            "status": "PAUSED",
+            "spend": 14.45,
+            "impressions": 248,
+            "clicks": 3,
+            "ctr": 1.209677,
+            "cpc": 4.816667
+          }
+        ]
+      },
+      {
+        "name": "CBO - Dresses - Catalog",
+        "spend": 0.0,
+        "ctr": 0.0,
+        "cpc": 0.0,
+        "roas": 0.0,
+        "days": 0,
+        "ads": [
+          {
+            "ad_id": "6940944660707",
+            "ad_name": "Adset - geen creative",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Verkoop CBO De Lexi Suede Bomber Jacket 28-03-2026",
+        "spend": 0.0,
+        "ctr": 0.0,
+        "cpc": 0.0,
+        "roas": 0.0,
+        "days": 0,
+        "ads": [
+          {
+            "ad_id": "6939431062507",
+            "ad_name": "vid3_lexi bomber jack",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          },
+          {
+            "ad_id": "6939470853107",
+            "ad_name": "img1_summercollection2026",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          },
+          {
+            "ad_id": "6939470852507",
+            "ad_name": "img3_effortlessly chic",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          },
+          {
+            "ad_id": "6939471335507",
+            "ad_name": "vid1_lexi bomber jack",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          },
+          {
+            "ad_id": "6939470853307",
+            "ad_name": "img2_suede bomber jacket",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          },
+          {
+            "ad_id": "6939470852907",
+            "ad_name": "vid2_lexi bomber jack",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Bericht: 'One piece, three ways. Which look is your...'",
+        "spend": 0.0,
+        "ctr": 0.0,
+        "cpc": 0.0,
+        "roas": 0.0,
+        "days": 0,
+        "ads": [
+          {
+            "ad_id": "6933863285307",
+            "ad_name": "Bericht: 'One piece, three ways. Which look is your...'",
+            "status": "PAUSED",
+            "spend": 0.0,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": 0.0,
+            "cpc": 0.0
+          }
+        ]
       }
     ],
-    "total_spend": 0.0,
-    "total_roas": 0
+    "total_spend": 73.98,
+    "total_roas": 0.0
   },
   "shopify": {
     "total_orders": 0,
