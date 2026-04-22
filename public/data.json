@@ -1,1 +1,244 @@
-{}
+{
+  "updated_at": "2026-04-22T09:54:42.955215",
+  "meta": {
+    "spend": 0.0,
+    "ctr": 0.0,
+    "cpc": 0.0,
+    "roas": 0,
+    "impressions": 0,
+    "clicks": 0,
+    "campaigns": 1,
+    "ads_active": 6
+  },
+  "ads": {
+    "campaigns": [
+      {
+        "name": "Meave & Ivy - DPA - Apr 2026",
+        "spend": 0.0,
+        "ctr": 0.0,
+        "cpc": 0.0,
+        "roas": 0.0,
+        "days": 6,
+        "ads": []
+      }
+    ],
+    "total_spend": 0.0,
+    "total_roas": 0
+  },
+  "shopify": {
+    "total_orders": 0,
+    "total_revenue": 0,
+    "avg_order_value": 0,
+    "abandoned": 0,
+    "top_products": []
+  },
+  "ga4": {
+    "sessions": 22,
+    "users": 19,
+    "pageviews": 33,
+    "channels": {
+      "Paid Social": {
+        "sessions": 7,
+        "users": 7
+      },
+      "Unassigned": {
+        "sessions": 9,
+        "users": 7
+      },
+      "Direct": {
+        "sessions": 5,
+        "users": 4
+      },
+      "Organic Shopping": {
+        "sessions": 1,
+        "users": 1
+      }
+    },
+    "top_pages": [
+      {
+        "page": "/",
+        "views": 14,
+        "users": 5
+      },
+      {
+        "page": "/products/maliyah-maxi-dress-red",
+        "views": 2,
+        "users": 1
+      },
+      {
+        "page": "/products/the-lexi-suede-bomber-jacket-luxury-camel-cropped-racing-coat",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "page": "/blogs/news/the-complete-guide-to-barefoot-shoes-in-the-uk",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "page": "/cart",
+        "views": 1,
+        "users": 1
+      }
+    ]
+  },
+  "knowledge": {
+    "last_updated": "2026-04-21",
+    "topics": 10
+  },
+  "products": {
+    "recommendations": [
+      {
+        "id": "17767820060",
+        "title": "Satin Halter Corset Boned Maxi Dress",
+        "category": "Maxi Dress",
+        "aliexpress_url": "https://www.aliexpress.com/w/wholesale-satin-corset-halter-maxi-dress.html",
+        "aliexpress_price": 14.99,
+        "babyboo_product": "Shae Maxi Dress - Sage (Babyboo Fashion) \u2014 bias-cut satin, corseted boning, pleated cups, halter straps, AUD $141",
+        "babyboo_price": 70.5,
+        "your_price": 65.95,
+        "margin": 4.4,
+        "discount_vs_babyboo": "8% cheaper than Babyboo",
+        "why_it_sells": "The satin halter corset maxi is Babyboo's core bestseller and a confirmed 2025 runway trend (Victoria Beckham, Tove), making it a high-demand wedding guest and occasion wear staple for UK women aged 20\u201345.",
+        "trend_score": 10,
+        "status": "new",
+        "added_at": "2026-04-21T16:33:26.787486",
+        "expires_at": "2026-05-05T16:33:26.787489"
+      },
+      {
+        "id": "17767820061",
+        "title": "Strapless Stretch Satin Corset Maxi Gown with Thigh Split",
+        "category": "Maxi Dress",
+        "aliexpress_url": "https://www.aliexpress.com/w/wholesale-strapless-satin-corset-maxi-dress.html",
+        "aliexpress_price": 17.5,
+        "babyboo_product": "Safiya Maxi Dress - Black (Babyboo Fashion) \u2014 luxury heavy stretch satin, hidden corset, strapless, drape bust detail, thigh-high split, AUD ~$145",
+        "babyboo_price": 72.5,
+        "your_price": 67.95,
+        "margin": 3.88,
+        "discount_vs_babyboo": "8% cheaper than Babyboo",
+        "why_it_sells": "Strapless satin gowns with hidden corset boning dominate the UK eventwear and black-tie-adjacent market, with strong repeat demand for birthday, wedding, and formal event dressing.",
+        "trend_score": 9,
+        "status": "new",
+        "added_at": "2026-04-21T16:33:26.787503",
+        "expires_at": "2026-05-05T16:33:26.787504"
+      },
+      {
+        "id": "17767820062",
+        "title": "Bardot Gathered Satin Corset Maxi Dress with Wrap Skirt",
+        "category": "Maxi Dress",
+        "aliexpress_url": "https://www.aliexpress.com/w/wholesale-bardot-satin-corset-maxi-dress.html",
+        "aliexpress_price": 16.0,
+        "babyboo_product": "Gwendolyn Maxi Dress - Burgundy (Babyboo Fashion) \u2014 luxury stretch satin, internal boned corset, gathered bardot neckline, wrap-over skirt, thigh-high split, AUD $143",
+        "babyboo_price": 71.5,
+        "your_price": 66.95,
+        "margin": 4.18,
+        "discount_vs_babyboo": "8% cheaper than Babyboo",
+        "why_it_sells": "The bardot neckline with internal corset is a perennial UK occasion wear bestseller \u2014 particularly in rich autumnal tones like burgundy \u2014 driving strong conversion for wedding guest, prom, and evening events.",
+        "trend_score": 9,
+        "status": "new",
+        "added_at": "2026-04-21T16:33:26.787513",
+        "expires_at": "2026-05-05T16:33:26.787514"
+      },
+      {
+        "id": "17767820063",
+        "title": "Bias Cut One-Shoulder Satin Maxi Dress with Draped Bodice",
+        "category": "Maxi Dress",
+        "aliexpress_url": "https://www.aliexpress.com/w/wholesale-one-shoulder-satin-bias-cut-maxi-dress.html",
+        "aliexpress_price": 13.5,
+        "babyboo_product": "Ariel Maxi Dress - Ivory (Babyboo Fashion) \u2014 lightweight stretch satin, one-shoulder, draped detailing, thigh-high split, body-hugging, AUD $126",
+        "babyboo_price": 63.0,
+        "your_price": 58.95,
+        "margin": 4.37,
+        "discount_vs_babyboo": "8% cheaper than Babyboo",
+        "why_it_sells": "One-shoulder satin bias-cut maxis in ivory/cream are a consistent UK bestseller for bridal events, engagement parties and summer weddings, with strong Google and TikTok search volume throughout 2025.",
+        "trend_score": 8,
+        "status": "new",
+        "added_at": "2026-04-21T16:33:26.787522",
+        "expires_at": "2026-05-05T16:33:26.787523"
+      },
+      {
+        "id": "17767820064",
+        "title": "Floral Jacquard Halterneck Lace-Up Maxi Dress (Occasion Wear)",
+        "category": "Maxi Dress",
+        "aliexpress_url": "https://www.aliexpress.com/w/wholesale-floral-jacquard-halterneck-maxi-dress.html",
+        "aliexpress_price": 19.0,
+        "babyboo_product": "Josephine Maxi Dress - Ivory (Babyboo Fashion) \u2014 premium floral jacquard, halterneck, plunge neckline, waist-cinching, lace-up back, floor-length, AUD ~$180",
+        "babyboo_price": 90.0,
+        "your_price": 83.95,
+        "margin": 4.42,
+        "discount_vs_babyboo": "8% cheaper than Babyboo",
+        "why_it_sells": "The Josephine is one of Babyboo's most viral TikTok styles (31K+ likes on a single post) and floral jacquard halter maxis align perfectly with the UK's spring/summer wedding guest and races season demand.",
+        "trend_score": 9,
+        "status": "new",
+        "added_at": "2026-04-21T16:33:26.787531",
+        "expires_at": "2026-05-05T16:33:26.787532"
+      }
+    ],
+    "last_updated": "2026-04-21T16:33:26.787534"
+  },
+  "bots": [
+    {
+      "name": "Atlas",
+      "role": "Orchestrator",
+      "status": "active",
+      "last_run": "Daily 06:30",
+      "next_run": "Tomorrow 06:30"
+    },
+    {
+      "name": "Meta Ads",
+      "role": "Ad Monitor",
+      "status": "active",
+      "last_run": "Daily 08:00",
+      "next_run": "Tomorrow 08:00"
+    },
+    {
+      "name": "Social Media",
+      "role": "Content",
+      "status": "active",
+      "last_run": "Daily 06:00",
+      "next_run": "Tomorrow 06:00"
+    },
+    {
+      "name": "Shopify",
+      "role": "Store Manager",
+      "status": "active",
+      "last_run": "Daily 07:00",
+      "next_run": "Tomorrow 07:00"
+    },
+    {
+      "name": "GA4",
+      "role": "Analytics",
+      "status": "active",
+      "last_run": "Daily 07:30",
+      "next_run": "Tomorrow 07:30"
+    },
+    {
+      "name": "Price Monitor",
+      "role": "Pricing",
+      "status": "active",
+      "last_run": "Hourly",
+      "next_run": "Next hour"
+    },
+    {
+      "name": "Knowledge",
+      "role": "Intelligence",
+      "status": "active",
+      "last_run": "Monday 05:00",
+      "next_run": "Next Monday"
+    },
+    {
+      "name": "Product Scout",
+      "role": "Sourcing",
+      "status": "active",
+      "last_run": "Friday 10:00",
+      "next_run": "Next Friday"
+    },
+    {
+      "name": "CRO Expert",
+      "role": "Conversion",
+      "status": "active",
+      "last_run": "On demand",
+      "next_run": "On demand"
+    }
+  ]
+}
