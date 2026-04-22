@@ -11,6 +11,8 @@ export default function Dashboard() {
   const [liveData, setLiveData] = useState<any>(null)
   const [adsPeriod, setAdsPeriod] = useState('max')
   const [expandedCampaign, setExpandedCampaign] = useState<string | null>(null)
+  const [spyFilter, setSpyFilter] = useState('all')
+  const [expandedAd, setExpandedAd] = useState<string | null>(null)
   const [actions, setActions] = useState([
     { id: 1, urgency: 'high', impact: 'high', title: 'Remove "Save 30-40%" badges from homepage', description: 'Public discounting destroys premium positioning. Immediate CVR impact.', source: 'CRO Expert', category: 'Website', done: false },
     { id: 2, urgency: 'high', impact: 'high', title: 'Activate customer reviews on product pages', description: 'Zero reviews visible. UGC increases CVR by up to 166% in fashion.', source: 'CRO Expert', category: 'Trust', done: false },
@@ -488,6 +490,196 @@ export default function Dashboard() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        )}
+
+
+        {/* SPY */}
+        {activeTab === 'spy' && (
+          <div className="space-y-6">
+            {/* Header */}
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-white/60 text-sm flex items-center gap-2">
+                  <span>🕵️</span> Ad Spy
+                  {(!liveData?.spy || liveData?.spy?.total_found === 0) && (
+                    <span className="text-xs bg-amber-500/20 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded-full">Wacht op Meta goedkeuring</span>
+                  )}
+                </h2>
+                <p className="text-white/20 text-xs mt-0.5">
+                  {liveData?.spy?.total_found || 0} ads gescand · {liveData?.spy?.winning_ads?.length || 0} winners · Elke vrijdag 09:00
+                </p>
+              </div>
+              <div className="flex gap-1">
+                {['all', 'winners', 'babyboo', 'oh polly', 'plt'].map(f => (
+                  <button key={f} onClick={() => setSpyFilter(f)}
+                    className={"px-3 py-1.5 text-xs rounded transition-colors capitalize " + (spyFilter === f ? 'bg-[#c9a96e]/20 text-[#c9a96e] border border-[#c9a96e]/30' : 'text-white/30 hover:text-white/60 border border-white/[0.06]')}>
+                    {f}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* AI Analyse */}
+            {liveData?.spy?.ai_analysis?.winning_patterns && (
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h3 className="text-white/30 text-xs tracking-widest uppercase mb-3">Winning Patronen</h3>
+                  <div className="space-y-2">
+                    {(liveData.spy.ai_analysis.winning_patterns || []).map((p: string, i: number) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <div className="w-1 h-1 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></div>
+                        <p className="text-white/50 text-xs">{p}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h3 className="text-white/30 text-xs tracking-widest uppercase mb-3">Hook Types</h3>
+                  <div className="space-y-2">
+                    {(liveData.spy.ai_analysis.hook_types || []).map((h: string, i: number) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <div className="w-1 h-1 rounded-full bg-[#c9a96e] mt-1.5 flex-shrink-0"></div>
+                        <p className="text-white/50 text-xs">{h}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h3 className="text-white/30 text-xs tracking-widest uppercase mb-3">Targeting Advies</h3>
+                  {liveData.spy.ai_analysis.recommended_targeting && (
+                    <div className="space-y-2">
+                      {[
+                        { label: 'Leeftijd', value: liveData.spy.ai_analysis.recommended_targeting.ages },
+                        { label: 'Geslacht', value: liveData.spy.ai_analysis.recommended_targeting.gender },
+                        { label: 'Interesses', value: (liveData.spy.ai_analysis.recommended_targeting.interests || []).join(', ') },
+                      ].map((item, i) => (
+                        <div key={i} className="flex justify-between py-1 border-b border-white/[0.04]">
+                          <p className="text-white/20 text-xs">{item.label}</p>
+                          <p className="text-white/50 text-xs">{item.value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Meave & Ivy Ad Suggesties */}
+            {(liveData?.spy?.ai_analysis?.meave_ivy_ads || []).length > 0 && (
+              <div className="bg-[#c9a96e]/5 border border-[#c9a96e]/15 p-5 rounded">
+                <h3 className="text-[#c9a96e] text-xs tracking-widest uppercase mb-4">✍️ Kant-en-klare Meave & Ivy Ads</h3>
+                <div className="space-y-4">
+                  {(liveData.spy.ai_analysis.meave_ivy_ads || []).map((ad: any, i: number) => (
+                    <div key={i} className="bg-white/[0.03] border border-white/[0.06] p-4 rounded">
+                      <div className="flex items-center justify-between mb-2">
+                        <p className="text-[#c9a96e] text-xs font-medium">Suggestie {i+1} · {ad.product_type}</p>
+                        <p className="text-white/20 text-xs">{ad.why_it_wins}</p>
+                      </div>
+                      <p className="text-white/80 text-sm font-medium mb-1">{ad.hook}</p>
+                      <p className="text-white/40 text-xs leading-relaxed mb-2">{ad.body}</p>
+                      <p className="text-white/30 text-xs">Link titel: <span className="text-white/50">{ad.title}</span></p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Winning Ads lijst */}
+            <div className="space-y-3">
+              <h3 className="text-white/30 text-xs tracking-widest uppercase">
+                {spyFilter === 'winners' ? 'Winning Ads (30+ dagen actief)' :
+                 spyFilter === 'all' ? 'Alle Gescande Ads' :
+                 'Ads van ' + spyFilter}
+              </h3>
+              {(() => {
+                const allAds = liveData?.spy?.top_ads || []
+                const filtered = allAds.filter((ad: any) => {
+                  if (spyFilter === 'winners') return ad._score >= 50
+                  if (spyFilter === 'all') return true
+                  return (ad.page_name || '').toLowerCase().includes(spyFilter)
+                })
+
+                if (filtered.length === 0) {
+                  return (
+                    <div className="bg-white/[0.02] border border-white/[0.06] p-8 rounded text-center">
+                      <p className="text-white/20 text-sm mb-2">🕵️ Geen ads gevonden</p>
+                      <p className="text-white/10 text-xs">Wacht op Meta Ad Library API goedkeuring</p>
+                      <p className="text-white/10 text-xs mt-1">Je ID verificatie is ingediend — max 48 uur</p>
+                    </div>
+                  )
+                }
+
+                return filtered.map((ad: any, i: number) => {
+                  const isExpanded = expandedAd === ad.id
+                  const days = ad._days_running || 0
+                  const score = ad._score || 0
+                  const bodies = ad.ad_creative_bodies || []
+                  const titles = ad.ad_creative_link_titles || []
+                  const isWinner = score >= 50
+
+                  return (
+                    <div key={i} className={"border rounded overflow-hidden " + (isWinner ? 'bg-emerald-500/5 border-emerald-500/15' : 'bg-white/[0.02] border-white/[0.06]')}>
+                      <button onClick={() => setExpandedAd(isExpanded ? null : ad.id)}
+                        className="w-full flex items-center gap-4 p-4 hover:bg-white/[0.02] transition-colors text-left">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            {isWinner && <span className="text-xs bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded">WINNER</span>}
+                            <p className="text-white/80 text-sm truncate">{ad.page_name || 'Unknown'}</p>
+                          </div>
+                          <p className="text-white/30 text-xs truncate">{bodies[0]?.substring(0, 80) || 'geen copy'}...</p>
+                        </div>
+                        <div className="grid grid-cols-3 gap-4 text-right flex-shrink-0">
+                          <div>
+                            <p className="text-white/20 text-xs mb-0.5">Dagen actief</p>
+                            <p className={"text-sm " + (days >= 30 ? 'text-emerald-400' : days >= 14 ? 'text-amber-400' : 'text-white/40')}>{days}d</p>
+                          </div>
+                          <div>
+                            <p className="text-white/20 text-xs mb-0.5">Score</p>
+                            <p className={"text-sm " + (score >= 70 ? 'text-emerald-400' : score >= 50 ? 'text-amber-400' : 'text-white/40')}>{score}</p>
+                          </div>
+                          <div>
+                            <p className="text-white/20 text-xs mb-0.5">Platform</p>
+                            <p className="text-white/40 text-xs">{(ad.publisher_platforms || []).join(', ') || '—'}</p>
+                          </div>
+                        </div>
+                        <span className="text-white/20 text-xs flex-shrink-0">{isExpanded ? '▲' : '▼'}</span>
+                      </button>
+                      {isExpanded && (
+                        <div className="border-t border-white/[0.06] p-4 space-y-3">
+                          {bodies.length > 0 && (
+                            <div>
+                              <p className="text-white/20 text-xs mb-1 tracking-widest uppercase">Ad Copy</p>
+                              <p className="text-white/60 text-sm leading-relaxed">{bodies[0]}</p>
+                            </div>
+                          )}
+                          {titles.length > 0 && (
+                            <div>
+                              <p className="text-white/20 text-xs mb-1 tracking-widest uppercase">Titel</p>
+                              <p className="text-white/50 text-sm">{titles[0]}</p>
+                            </div>
+                          )}
+                          <div className="grid grid-cols-3 gap-4 pt-2 border-t border-white/[0.04]">
+                            <div>
+                              <p className="text-white/20 text-xs mb-1">Start datum</p>
+                              <p className="text-white/40 text-xs">{ad.ad_delivery_start_time?.substring(0, 10) || '—'}</p>
+                            </div>
+                            <div>
+                              <p className="text-white/20 text-xs mb-1">Bron</p>
+                              <p className="text-white/40 text-xs">{ad._source || '—'}</p>
+                            </div>
+                            <div>
+                              <p className="text-white/20 text-xs mb-1">Target leeftijd</p>
+                              <p className="text-white/40 text-xs">{(ad.target_ages || []).join(', ') || '—'}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })
+              })()}
             </div>
           </div>
         )}
