@@ -67,7 +67,7 @@ export default function Dashboard() {
       return (o[a.urgency] + o[a.impact]) - (o[b.urgency] + o[b.impact])
     })
 
-  const tabs = ['overview', 'ads', 'actions', 'bots', 'knowledge', 'products']
+  const tabs = ['overview', 'ads', 'actions', 'bots', 'knowledge', 'products', 'spy']
 
   return (
     <div className="min-h-screen bg-[#080808] text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
