@@ -10,6 +10,7 @@ export default function Dashboard() {
   const [time, setTime] = useState('')
   const [liveData, setLiveData] = useState<any>(null)
   const [adsPeriod, setAdsPeriod] = useState('max')
+  const [expandedCampaign, setExpandedCampaign] = useState<string | null>(null)
   const [actions, setActions] = useState([
     { id: 1, urgency: 'high', impact: 'high', title: 'Remove "Save 30-40%" badges from homepage', description: 'Public discounting destroys premium positioning. Immediate CVR impact.', source: 'CRO Expert', category: 'Website', done: false },
     { id: 2, urgency: 'high', impact: 'high', title: 'Activate customer reviews on product pages', description: 'Zero reviews visible. UGC increases CVR by up to 166% in fashion.', source: 'CRO Expert', category: 'Trust', done: false },
@@ -253,42 +254,51 @@ export default function Dashboard() {
                 </div>
               ))}
             </div>
-            <div className="bg-white/[0.03] border border-white/[0.06] p-6">
-              <h2 className="text-xs tracking-widest uppercase text-white/40 mb-6">Ad Performance</h2>
-              <div className="space-y-3">
-                {[
-                  { name: 'V2 - Identity New', spend: 11.36, ctr: 3.9, cpc: 1.26, status: 'WINNER', color: 'emerald' },
-                  { name: 'V5 - Schwartz Transformation', spend: 0, ctr: 0, cpc: 0, status: 'NEW', color: 'purple' },
-                  { name: 'V6 - Schwartz Social Proof', spend: 0, ctr: 0, cpc: 0, status: 'NEW', color: 'purple' },
-                  { name: 'V1 - Identity Original', spend: 7.61, ctr: 2.8, cpc: 2.54, status: 'ACTIVE', color: 'blue' },
-                  { name: 'V4 - Occasion', spend: 3.37, ctr: 2.44, cpc: 3.37, status: 'ACTIVE', color: 'blue' },
-                  { name: 'V3 - Transformation', spend: 0.23, ctr: 0, cpc: 0, status: 'LEARNING', color: 'amber' },
-                  { name: 'V5 - Quality (old)', spend: 14.29, ctr: 1.22, cpc: 4.76, status: 'PAUSED', color: 'red' },
-                  { name: 'V6 - Question (old)', spend: 5.53, ctr: 2.0, cpc: 5.53, status: 'PAUSED', color: 'red' },
-                ].map((ad, i) => (
-                  <div key={i} className={`flex items-center gap-4 p-4 border rounded ${
-                    ad.color === 'emerald' ? 'bg-emerald-500/5 border-emerald-500/20' :
-                    ad.color === 'red' ? 'bg-white/[0.01] border-white/[0.03] opacity-40' :
-                    ad.color === 'purple' ? 'bg-purple-500/5 border-purple-500/15' :
-                    ad.color === 'amber' ? 'bg-amber-500/5 border-amber-500/10' :
-                    'bg-white/[0.02] border-white/[0.06]'
-                  }`}>
-                    <div className="flex-1"><p className="text-white/80 text-sm truncate">{ad.name}</p></div>
-                    <div className="grid grid-cols-3 gap-6 text-right">
-                      <div><p className="text-white/20 text-xs mb-0.5">Spend</p><p className="text-white/60 text-sm">€{ad.spend.toFixed(2)}</p></div>
-                      <div><p className="text-white/20 text-xs mb-0.5">CTR</p><p className={`text-sm ${ad.ctr >= 3 ? 'text-emerald-400' : ad.ctr >= 2 ? 'text-white/60' : ad.ctr > 0 ? 'text-amber-400' : 'text-white/20'}`}>{ad.ctr > 0 ? ad.ctr + '%' : '—'}</p></div>
-                      <div><p className="text-white/20 text-xs mb-0.5">CPC</p><p className={`text-sm ${ad.cpc > 0 && ad.cpc <= 1.5 ? 'text-emerald-400' : ad.cpc > 3 ? 'text-red-400' : ad.cpc > 0 ? 'text-white/60' : 'text-white/20'}`}>{ad.cpc > 0 ? '€' + ad.cpc : '—'}</p></div>
-                    </div>
-                    <span className={`text-xs px-2 py-1 rounded w-20 text-center flex-shrink-0 ${
-                      ad.color === 'emerald' ? 'bg-emerald-500/20 text-emerald-400' :
-                      ad.color === 'red' ? 'bg-white/5 text-white/20' :
-                      ad.color === 'purple' ? 'bg-purple-500/20 text-purple-400' :
-                      ad.color === 'amber' ? 'bg-amber-500/20 text-amber-400' :
-                      'bg-white/5 text-white/40'
-                    }`}>{ad.status}</span>
+            <div className="space-y-3">
+              {(liveData?.ads?.campaigns || []).map((campaign: any, i: number) => {
+                const spend = campaign.spend ?? 0
+                const ctr = campaign.ctr ?? 0
+                const cpc = campaign.cpc ?? 0
+                const isActive = (campaign.ads || []).some((a: any) => a.status === 'ACTIVE')
+                const isExpanded = expandedCampaign === campaign.name
+                return (
+                  <div key={i} className="bg-white/[0.03] border border-white/[0.06] rounded overflow-hidden">
+                    <button onClick={() => setExpandedCampaign(isExpanded ? null : campaign.name)}
+                      className="w-full flex items-center gap-4 p-4 hover:bg-white/[0.02] transition-colors text-left">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className={"w-1.5 h-1.5 rounded-full flex-shrink-0 " + (isActive ? 'bg-emerald-400' : 'bg-white/20')}></div>
+                          <p className="text-white/80 text-sm truncate">{campaign.name}</p>
+                        </div>
+                        <p className="text-white/20 text-xs ml-3.5">{(campaign.ads || []).length} ads · {(campaign.ads || []).filter((a: any) => a.status === 'ACTIVE').length} active</p>
+                      </div>
+                      <div className="grid grid-cols-3 gap-6 text-right flex-shrink-0">
+                        <div><p className="text-white/20 text-xs mb-0.5">Spend</p><p className="text-white/60 text-sm">{'€'}{spend.toFixed(2)}</p></div>
+                        <div><p className="text-white/20 text-xs mb-0.5">CTR</p><p className={"text-sm " + (ctr >= 3 ? 'text-emerald-400' : ctr >= 2 ? 'text-white/60' : ctr > 0 ? 'text-amber-400' : 'text-white/20')}>{ctr > 0 ? ctr.toFixed(2) + '%' : '—'}</p></div>
+                        <div><p className="text-white/20 text-xs mb-0.5">CPC</p><p className={"text-sm " + (cpc > 0 && cpc <= 1.5 ? 'text-emerald-400' : cpc > 3 ? 'text-red-400' : cpc > 0 ? 'text-white/60' : 'text-white/20')}>{cpc > 0 ? '€' + cpc.toFixed(2) : '—'}</p></div>
+                      </div>
+                      <span className="text-white/20 text-xs flex-shrink-0 w-4">{isExpanded ? '▲' : '▼'}</span>
+                    </button>
+                    {isExpanded && (campaign.ads || []).length > 0 && (
+                      <div className="border-t border-white/[0.06] divide-y divide-white/[0.04]">
+                        {(campaign.ads || []).map((ad: any, j: number) => (
+                          <div key={j} className={"flex items-center gap-4 px-6 py-3 " + (ad.status === 'PAUSED' ? 'opacity-40' : '')}>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-white/60 text-xs truncate">{ad.ad_name}</p>
+                              <p className={"text-xs mt-0.5 " + (ad.status === 'ACTIVE' ? 'text-emerald-400' : 'text-white/20')}>{ad.status}</p>
+                            </div>
+                            <div className="grid grid-cols-3 gap-6 text-right flex-shrink-0">
+                              <div><p className="text-white/20 text-xs mb-0.5">Spend</p><p className="text-white/40 text-xs">{'€'}{(ad.spend || 0).toFixed(2)}</p></div>
+                              <div><p className="text-white/20 text-xs mb-0.5">CTR</p><p className={"text-xs " + ((ad.ctr || 0) >= 3 ? 'text-emerald-400' : (ad.ctr || 0) > 0 ? 'text-white/40' : 'text-white/20')}>{(ad.ctr || 0) > 0 ? (ad.ctr).toFixed(2) + '%' : '—'}</p></div>
+                              <div><p className="text-white/20 text-xs mb-0.5">CPC</p><p className={"text-xs " + ((ad.cpc || 0) > 0 && (ad.cpc || 0) <= 1.5 ? 'text-emerald-400' : (ad.cpc || 0) > 3 ? 'text-red-400' : 'text-white/20')}>{(ad.cpc || 0) > 0 ? '€' + (ad.cpc).toFixed(2) : '—'}</p></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))}
-              </div>
+                )
+              })}
             </div>
           </div>
         )}
