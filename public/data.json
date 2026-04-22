@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T11:04:23.597655",
+  "updated_at": "2026-04-22T11:09:33.358095",
   "meta": {
     "spend": 73.98,
     "ctr": 0.0,
@@ -19,7 +19,9 @@
         "cpc": 0.0,
         "roas": 0.0,
         "days": 6,
-        "ads": []
+        "ads": [],
+        "periods": {},
+        "status": ""
       },
       {
         "name": "Meave & Ivy - Sales - Apr 2026",
@@ -109,7 +111,55 @@
             "ctr": 1.209677,
             "cpc": 4.816667
           }
-        ]
+        ],
+        "periods": {
+          "today": {
+            "spend": 6.41,
+            "clicks": 5,
+            "impressions": 67,
+            "ctr": 7.462687,
+            "cpc": 1.282,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "yesterday": {
+            "spend": 38.24,
+            "clicks": 15,
+            "impressions": 501,
+            "ctr": 2.994012,
+            "cpc": 2.549333,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "7d": {
+            "spend": 73.98,
+            "clicks": 33,
+            "impressions": 1092,
+            "ctr": 3.021978,
+            "cpc": 2.241818,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "30d": {
+            "spend": 73.98,
+            "clicks": 33,
+            "impressions": 1092,
+            "ctr": 3.021978,
+            "cpc": 2.241818,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "max": {
+            "spend": 73.98,
+            "clicks": 33,
+            "impressions": 1092,
+            "ctr": 3.021978,
+            "cpc": 2.241818,
+            "roas": 0.0,
+            "revenue": 0
+          }
+        },
+        "status": "ACTIVE"
       },
       {
         "name": "CBO - Dresses - Catalog",
@@ -129,7 +179,55 @@
             "ctr": 0.0,
             "cpc": 0.0
           }
-        ]
+        ],
+        "periods": {
+          "today": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "yesterday": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "7d": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "30d": {
+            "spend": 34.96,
+            "clicks": 53,
+            "impressions": 2262,
+            "ctr": 2.343059,
+            "cpc": 0.659623,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "max": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          }
+        },
+        "status": "PAUSED"
       },
       {
         "name": "Verkoop CBO De Lexi Suede Bomber Jacket 28-03-2026",
@@ -199,7 +297,55 @@
             "ctr": 0.0,
             "cpc": 0.0
           }
-        ]
+        ],
+        "periods": {
+          "today": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "yesterday": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "7d": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "30d": {
+            "spend": 50.92,
+            "clicks": 78,
+            "impressions": 2043,
+            "ctr": 3.817915,
+            "cpc": 0.652821,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "max": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          }
+        },
+        "status": "PAUSED"
       },
       {
         "name": "Bericht: 'One piece, three ways. Which look is your...'",
@@ -219,7 +365,55 @@
             "ctr": 0.0,
             "cpc": 0.0
           }
-        ]
+        ],
+        "periods": {
+          "today": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "yesterday": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "7d": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          },
+          "30d": {
+            "spend": 10.23,
+            "clicks": 59,
+            "impressions": 903,
+            "ctr": 6.533776,
+            "cpc": 0.17339,
+            "roas": 0.0,
+            "revenue": 0
+          },
+          "max": {
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
+            "revenue": 0
+          }
+        },
+        "status": "PAUSED"
       }
     ],
     "total_spend": 73.98,
