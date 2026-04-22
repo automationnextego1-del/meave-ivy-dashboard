@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T11:09:33.358095",
+  "updated_at": "2026-04-22T11:59:58.915935",
   "meta": {
     "spend": 73.98,
     "ctr": 0.0,
@@ -569,70 +569,5 @@
       }
     ],
     "last_updated": "2026-04-21T16:33:26.787534"
-  },
-  "bots": [
-    {
-      "name": "Atlas",
-      "role": "Orchestrator",
-      "status": "active",
-      "last_run": "Daily 06:30",
-      "next_run": "Tomorrow 06:30"
-    },
-    {
-      "name": "Meta Ads",
-      "role": "Ad Monitor",
-      "status": "active",
-      "last_run": "Daily 08:00",
-      "next_run": "Tomorrow 08:00"
-    },
-    {
-      "name": "Social Media",
-      "role": "Content",
-      "status": "active",
-      "last_run": "Daily 06:00",
-      "next_run": "Tomorrow 06:00"
-    },
-    {
-      "name": "Shopify",
-      "role": "Store Manager",
-      "status": "active",
-      "last_run": "Daily 07:00",
-      "next_run": "Tomorrow 07:00"
-    },
-    {
-      "name": "GA4",
-      "role": "Analytics",
-      "status": "active",
-      "last_run": "Daily 07:30",
-      "next_run": "Tomorrow 07:30"
-    },
-    {
-      "name": "Price Monitor",
-      "role": "Pricing",
-      "status": "active",
-      "last_run": "Hourly",
-      "next_run": "Next hour"
-    },
-    {
-      "name": "Knowledge",
-      "role": "Intelligence",
-      "status": "active",
-      "last_run": "Monday 05:00",
-      "next_run": "Next Monday"
-    },
-    {
-      "name": "Product Scout",
-      "role": "Sourcing",
-      "status": "active",
-      "last_run": "Friday 10:00",
-      "next_run": "Next Friday"
-    },
-    {
-      "name": "CRO Expert",
-      "role": "Conversion",
-      "status": "active",
-      "last_run": "On demand",
-      "next_run": "On demand"
-    }
-  ]
+  }
 }
