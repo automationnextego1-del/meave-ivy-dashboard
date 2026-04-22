@@ -68,7 +68,22 @@ const MOCK_DATA = {
 type Action = typeof MOCK_DATA.actions[0]
 
 export default function Dashboard() {
-  const [data] = useState(MOCK_DATA)
+  const [data, setData] = useState(MOCK_DATA)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('/api/dashboard')
+        const json = await res.json()
+        if (json && !json.error) setData(json)
+      } catch (e) {
+        console.error(e)
+      }
+    }
+    fetchData()
+    const interval = setInterval(fetchData, 300000)
+    return () => clearInterval(interval)
+  }, [])
   const [activeTab, setActiveTab] = useState('overview')
   const [actions, setActions] = useState(data.actions)
   const [filter, setFilter] = useState('all')
