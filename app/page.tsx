@@ -73,9 +73,11 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/api/dashboard')
+        const res = await fetch(
+          'https://raw.githubusercontent.com/automationnextego1-del/meave-ivy-dashboard/main/public/data.json?t=' + Date.now()
+        )
         const json = await res.json()
-        if (json && !json.error) setData(json)
+        if (json && json.updated_at) setData(json)
       } catch (e) {
         console.error(e)
       }
