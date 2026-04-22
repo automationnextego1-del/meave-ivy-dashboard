@@ -586,6 +586,105 @@ export default function Dashboard() {
               </div>
             )}
 
+            {/* Concurrent Intelligence */}
+            {liveData?.spy?.competitor_intelligence && Object.keys(liveData.spy.competitor_intelligence).length > 0 && (
+              <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                <h3 className="text-white/30 text-xs tracking-widest uppercase mb-4">🏢 Concurrent Intelligence</h3>
+                <div className="space-y-2">
+                  {Object.entries(liveData.spy.competitor_intelligence)
+                    .sort(([,a]: any, [,b]: any) => b.total_ads - a.total_ads)
+                    .slice(0, 6)
+                    .map(([name, data]: any, i: number) => (
+                    <div key={i} className="flex items-center gap-4 py-2 border-b border-white/[0.04]">
+                      <div className="flex-1">
+                        <p className="text-white/60 text-xs font-medium">{name}</p>
+                        <p className="text-white/20 text-xs">
+                          {Object.entries(data.hook_patterns || {}).sort(([,a]: any, [,b]: any) => b - a).slice(0,2).map(([h]: any) => h).join(' · ')}
+                        </p>
+                      </div>
+                      <div className="flex gap-6 text-right">
+                        <div><p className="text-white/20 text-xs mb-0.5">Ads</p><p className="text-white/50 text-xs">{data.total_ads}</p></div>
+                        <div><p className="text-white/20 text-xs mb-0.5">Gem. dagen</p><p className={"text-xs " + (data.avg_days >= 30 ? 'text-emerald-400' : 'text-white/50')}>{data.avg_days}d</p></div>
+                        <div><p className="text-white/20 text-xs mb-0.5">Max score</p><p className={"text-xs " + (data.max_score >= 70 ? 'text-emerald-400' : data.max_score >= 50 ? 'text-amber-400' : 'text-white/50')}>{data.max_score}</p></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Copy Intelligence */}
+            {liveData?.spy?.copy_intelligence?.top_power_words && (
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h3 className="text-white/30 text-xs tracking-widest uppercase mb-3">💬 Top Power Words</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {Object.entries(liveData.spy.copy_intelligence.top_power_words || {}).slice(0, 12).map(([word, count]: any, i: number) => (
+                      <span key={i} className="bg-white/[0.05] border border-white/[0.08] px-2 py-1 rounded text-white/50 text-xs">
+                        {word} <span className="text-white/20">({count})</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-white/[0.03] border border-white/[0.06] p-5">
+                  <h3 className="text-white/30 text-xs tracking-widest uppercase mb-3">🎯 Top Hooks</h3>
+                  <div className="space-y-2">
+                    {(liveData.spy.copy_intelligence.top_hooks || []).slice(0, 4).map((hook: string, i: number) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <div className="w-1 h-1 rounded-full bg-[#c9a96e] mt-1.5 flex-shrink-0"></div>
+                        <p className="text-white/40 text-xs italic">"{hook.substring(0, 80)}{hook.length > 80 ? '...' : ''}"</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Ad Varianten */}
+            {(liveData?.spy?.ad_variants || []).length > 0 && (
+              <div className="bg-[#c9a96e]/5 border border-[#c9a96e]/15 p-5 rounded">
+                <h3 className="text-[#c9a96e] text-xs tracking-widest uppercase mb-4">✍️ Kant-en-klare Ad Varianten</h3>
+                <div className="space-y-6">
+                  {(liveData.spy.ad_variants || []).map((item: any, i: number) => (
+                    <div key={i}>
+                      <p className="text-white/30 text-xs mb-3">
+                        Gebaseerd op: <span className="text-white/50">{item.source_ad?.page_name}</span>
+                        <span className="ml-2 text-white/20">({item.source_ad?._days_running}d actief · score {item.source_ad?._score})</span>
+                      </p>
+                      <div className="grid grid-cols-1 gap-3">
+                        {(item.variants?.variants || []).map((v: any, j: number) => (
+                          <div key={j} className="bg-white/[0.03] border border-white/[0.06] p-4 rounded">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <span className="bg-[#c9a96e]/20 text-[#c9a96e] text-xs px-2 py-0.5 rounded">Variant {v.variant}</span>
+                                <span className="text-white/30 text-xs">{v.angle}</span>
+                              </div>
+                              {item.variants?.recommended_first_test === v.variant && (
+                                <span className="bg-emerald-500/20 text-emerald-400 text-xs px-2 py-0.5 rounded">Aanbevolen</span>
+                              )}
+                            </div>
+                            <p className="text-white/80 text-sm font-medium mb-1">"{v.hook}"</p>
+                            <p className="text-white/40 text-xs leading-relaxed mb-2">{v.body}</p>
+                            <div className="flex items-center gap-4 text-xs text-white/30">
+                              <span>CTA: <span className="text-white/50">{v.cta}</span></span>
+                              <span>Titel: <span className="text-white/50">{v.link_title}</span></span>
+                            </div>
+                            <p className="text-white/20 text-xs mt-1 italic">{v.why_it_works}</p>
+                          </div>
+                        ))}
+                      </div>
+                      {item.variants?.visual_concept && (
+                        <div className="mt-3 bg-white/[0.02] border border-white/[0.04] p-3 rounded">
+                          <p className="text-white/20 text-xs mb-1 tracking-widest uppercase">Visual Concept</p>
+                          <p className="text-white/40 text-xs">{item.variants.visual_concept}</p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Winning Ads lijst */}
             <div className="space-y-3">
               <h3 className="text-white/30 text-xs tracking-widest uppercase">
