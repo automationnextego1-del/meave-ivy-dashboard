@@ -9,6 +9,7 @@ export default function Dashboard() {
   const [filter, setFilter] = useState('all')
   const [time, setTime] = useState('')
   const [liveData, setLiveData] = useState<any>(null)
+  const [adsPeriod, setAdsPeriod] = useState('max')
   const [actions, setActions] = useState([
     { id: 1, urgency: 'high', impact: 'high', title: 'Remove "Save 30-40%" badges from homepage', description: 'Public discounting destroys premium positioning. Immediate CVR impact.', source: 'CRO Expert', category: 'Website', done: false },
     { id: 2, urgency: 'high', impact: 'high', title: 'Activate customer reviews on product pages', description: 'Zero reviews visible. UGC increases CVR by up to 166% in fashion.', source: 'CRO Expert', category: 'Trust', done: false },
@@ -192,6 +193,52 @@ export default function Dashboard() {
         {/* ADS */}
         {activeTab === 'ads' && (
           <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <h2 className="text-white/40 text-xs tracking-widest uppercase">Ad Performance</h2>
+              <div className="flex gap-1">
+                {[
+                  { key: 'today', label: 'Vandaag' },
+                  { key: 'yesterday', label: 'Gisteren' },
+                  { key: '7d', label: '7 dagen' },
+                  { key: '30d', label: '30 dagen' },
+                  { key: 'max', label: 'Max' },
+                ].map(p => (
+                  <button key={p.key} onClick={() => setAdsPeriod(p.key)}
+                    className={"px-3 py-1.5 text-xs rounded transition-colors " + (adsPeriod === p.key ? 'bg-[#c9a96e]/20 text-[#c9a96e] border border-[#c9a96e]/30' : 'text-white/30 hover:text-white/60 border border-white/[0.06]')}>
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {(() => {
+              const campaigns = liveData?.ads?.campaigns || []
+              const pd = campaigns.reduce((acc: any, c: any) => {
+                const p = c.periods?.[adsPeriod] || {}
+                acc.spend += p.spend || 0
+                acc.clicks += p.clicks || 0
+                acc.impressions += p.impressions || 0
+                acc.ctr = acc.impressions > 0 ? (acc.clicks / acc.impressions * 100) : 0
+                acc.cpc = acc.clicks > 0 ? (acc.spend / acc.clicks) : 0
+                return acc
+              }, { spend: 0, clicks: 0, impressions: 0, ctr: 0, cpc: 0 })
+              const lbl: Record<string, string> = { today: 'Vandaag', yesterday: 'Gisteren', '7d': '7 dagen', '30d': '30 dagen', max: 'Totaal' }
+              return (
+                <div className="grid grid-cols-4 gap-4">
+                  {[
+                    { label: 'Spend', value: '€' + pd.spend.toFixed(2), sub: lbl[adsPeriod] },
+                    { label: 'CTR', value: pd.ctr.toFixed(2) + '%', sub: pd.clicks + ' clicks' },
+                    { label: 'CPC', value: pd.cpc > 0 ? '€' + pd.cpc.toFixed(2) : '—', sub: 'Cost per click' },
+                    { label: 'Impressions', value: pd.impressions.toLocaleString(), sub: 'Total' },
+                  ].map((kpi, i) => (
+                    <div key={i} className="bg-white/[0.03] border border-white/[0.06] p-5">
+                      <p className="text-white/30 text-xs tracking-widest uppercase mb-3">{kpi.label}</p>
+                      <p style={{ fontFamily: "'Cormorant', serif" }} className="text-3xl font-light mb-1">{kpi.value}</p>
+                      <p className="text-white/20 text-xs">{kpi.sub}</p>
+                    </div>
+                  ))}
+                </div>
+              )
+            })()}
             <div className="grid grid-cols-4 gap-4">
               {[
                 { label: 'Total Spend', value: '€' + meta.spend.toFixed(2), sub: 'Since launch' },
