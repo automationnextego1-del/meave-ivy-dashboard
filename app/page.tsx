@@ -74,7 +74,8 @@ export default function Dashboard() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          'https://raw.githubusercontent.com/automationnextego1-del/meave-ivy-dashboard/main/public/data.json?t=' + Date.now()
+          'https://raw.githubusercontent.com/automationnextego1-del/meave-ivy-dashboard/main/public/data.json',
+          { cache: 'no-store' }
         )
         const json = await res.json()
         if (json && json.updated_at) setData(json)
