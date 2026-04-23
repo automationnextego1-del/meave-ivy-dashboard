@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-04-22T12:38:17.901710",
+  "updated_at": "2026-04-23T08:30:00.639827",
   "meta": {
-    "spend": 73.98,
+    "spend": 103.37,
     "ctr": 0.0,
     "cpc": 0.0,
     "roas": 0.0,
@@ -25,9 +25,9 @@
       },
       {
         "name": "Meave & Ivy - Sales - Apr 2026",
-        "spend": 73.98,
-        "ctr": 3.021978,
-        "cpc": 2.241818,
+        "spend": 103.37,
+        "ctr": 3.464357,
+        "cpc": 1.987885,
         "roas": 0.0,
         "days": 0,
         "ads": [
@@ -35,21 +35,21 @@
             "ad_id": "6956090917107",
             "ad_name": "V3 - Transformation",
             "status": "ACTIVE",
-            "spend": 3.18,
-            "impressions": 45,
-            "clicks": 2,
-            "ctr": 4.444444,
-            "cpc": 1.59
+            "spend": 4.23,
+            "impressions": 60,
+            "clicks": 5,
+            "ctr": 8.333333,
+            "cpc": 0.846
           },
           {
             "ad_id": "6956950286707",
             "ad_name": "V5 - Schwartz Transformation",
             "status": "ACTIVE",
-            "spend": 6.99,
-            "impressions": 107,
-            "clicks": 4,
-            "ctr": 3.738318,
-            "cpc": 1.7475
+            "spend": 32.93,
+            "impressions": 484,
+            "clicks": 20,
+            "ctr": 4.132231,
+            "cpc": 1.6465
           },
           {
             "ad_id": "6956090877307",
@@ -85,11 +85,11 @@
             "ad_id": "6956090843307",
             "ad_name": "V1 - Identity Original",
             "status": "ACTIVE",
-            "spend": 17.52,
-            "impressions": 234,
+            "spend": 19.92,
+            "impressions": 251,
             "clicks": 8,
-            "ctr": 3.418803,
-            "cpc": 2.19
+            "ctr": 3.187251,
+            "cpc": 2.49
           },
           {
             "ad_id": "6956091060707",
@@ -114,47 +114,47 @@
         ],
         "periods": {
           "today": {
-            "spend": 6.41,
-            "clicks": 5,
-            "impressions": 67,
-            "ctr": 7.462687,
-            "cpc": 1.282,
-            "roas": 0.0,
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
             "revenue": 0
           },
           "yesterday": {
-            "spend": 38.24,
-            "clicks": 15,
-            "impressions": 501,
-            "ctr": 2.994012,
-            "cpc": 2.549333,
+            "spend": 35.67,
+            "clicks": 24,
+            "impressions": 475,
+            "ctr": 5.052632,
+            "cpc": 1.48625,
             "roas": 0.0,
             "revenue": 0
           },
           "7d": {
-            "spend": 73.98,
-            "clicks": 33,
-            "impressions": 1092,
-            "ctr": 3.021978,
-            "cpc": 2.241818,
+            "spend": 103.37,
+            "clicks": 52,
+            "impressions": 1501,
+            "ctr": 3.464357,
+            "cpc": 1.987885,
             "roas": 0.0,
             "revenue": 0
           },
           "30d": {
-            "spend": 73.98,
-            "clicks": 33,
-            "impressions": 1092,
-            "ctr": 3.021978,
-            "cpc": 2.241818,
+            "spend": 103.37,
+            "clicks": 52,
+            "impressions": 1501,
+            "ctr": 3.464357,
+            "cpc": 1.987885,
             "roas": 0.0,
             "revenue": 0
           },
           "max": {
-            "spend": 73.98,
-            "clicks": 33,
-            "impressions": 1092,
-            "ctr": 3.021978,
-            "cpc": 2.241818,
+            "spend": 103.37,
+            "clicks": 52,
+            "impressions": 1501,
+            "ctr": 3.464357,
+            "cpc": 1.987885,
             "roas": 0.0,
             "revenue": 0
           }
@@ -395,11 +395,11 @@
             "revenue": 0
           },
           "30d": {
-            "spend": 10.23,
-            "clicks": 59,
-            "impressions": 903,
-            "ctr": 6.533776,
-            "cpc": 0.17339,
+            "spend": 5.2,
+            "clicks": 34,
+            "impressions": 458,
+            "ctr": 7.423581,
+            "cpc": 0.152941,
             "roas": 0.0,
             "revenue": 0
           },
@@ -416,7 +416,7 @@
         "status": "PAUSED"
       }
     ],
-    "total_spend": 73.98,
+    "total_spend": 103.37,
     "total_roas": 0.0
   },
   "shopify": {
@@ -427,23 +427,27 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 22,
-    "users": 19,
-    "pageviews": 33,
+    "sessions": 32,
+    "users": 30,
+    "pageviews": 57,
     "channels": {
       "Paid Social": {
-        "sessions": 7,
-        "users": 7
-      },
-      "Unassigned": {
-        "sessions": 9,
-        "users": 7
+        "sessions": 20,
+        "users": 20
       },
       "Direct": {
-        "sessions": 5,
-        "users": 4
+        "sessions": 7,
+        "users": 5
+      },
+      "Unassigned": {
+        "sessions": 3,
+        "users": 3
       },
       "Organic Shopping": {
+        "sessions": 1,
+        "users": 1
+      },
+      "Organic Social": {
         "sessions": 1,
         "users": 1
       }
@@ -451,28 +455,28 @@
     "top_pages": [
       {
         "page": "/",
-        "views": 14,
+        "views": 15,
         "users": 5
       },
       {
-        "page": "/products/maliyah-maxi-dress-red",
-        "views": 2,
-        "users": 1
-      },
-      {
-        "page": "/products/the-lexi-suede-bomber-jacket-luxury-camel-cropped-racing-coat",
-        "views": 2,
+        "page": "/products/rosetta-maxi-dress-blush",
+        "views": 4,
         "users": 2
       },
       {
-        "page": "/blogs/news/the-complete-guide-to-barefoot-shoes-in-the-uk",
-        "views": 1,
-        "users": 1
+        "page": "/collections/dresses",
+        "views": 3,
+        "users": 2
       },
       {
-        "page": "/cart",
-        "views": 1,
-        "users": 1
+        "page": "/products/maliyah-maxi-dress-red",
+        "views": 3,
+        "users": 2
+      },
+      {
+        "page": "/products/the-lexi-suede-bomber-jacket-luxury-camel-cropped-racing-coat",
+        "views": 3,
+        "users": 3
       }
     ]
   },
