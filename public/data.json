@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-04-23T08:30:00.639827",
+  "updated_at": "2026-04-24T08:30:01.186692",
   "meta": {
-    "spend": 103.37,
+    "spend": 103.4,
     "ctr": 0.0,
     "cpc": 0.0,
     "roas": 0.0,
@@ -25,9 +25,9 @@
       },
       {
         "name": "Meave & Ivy - Sales - Apr 2026",
-        "spend": 103.37,
-        "ctr": 3.464357,
-        "cpc": 1.987885,
+        "spend": 103.4,
+        "ctr": 3.462051,
+        "cpc": 1.988462,
         "roas": 0.0,
         "days": 0,
         "ads": [
@@ -45,11 +45,11 @@
             "ad_id": "6956950286707",
             "ad_name": "V5 - Schwartz Transformation",
             "status": "ACTIVE",
-            "spend": 32.93,
-            "impressions": 484,
+            "spend": 32.96,
+            "impressions": 485,
             "clicks": 20,
-            "ctr": 4.132231,
-            "cpc": 1.6465
+            "ctr": 4.123711,
+            "cpc": 1.648
           },
           {
             "ad_id": "6956090877307",
@@ -123,43 +123,43 @@
             "revenue": 0
           },
           "yesterday": {
-            "spend": 35.67,
-            "clicks": 24,
-            "impressions": 475,
-            "ctr": 5.052632,
-            "cpc": 1.48625,
-            "roas": 0.0,
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
             "revenue": 0
           },
           "7d": {
-            "spend": 103.37,
+            "spend": 103.4,
             "clicks": 52,
-            "impressions": 1501,
-            "ctr": 3.464357,
-            "cpc": 1.987885,
+            "impressions": 1502,
+            "ctr": 3.462051,
+            "cpc": 1.988462,
             "roas": 0.0,
             "revenue": 0
           },
           "30d": {
-            "spend": 103.37,
+            "spend": 103.4,
             "clicks": 52,
-            "impressions": 1501,
-            "ctr": 3.464357,
-            "cpc": 1.987885,
+            "impressions": 1502,
+            "ctr": 3.462051,
+            "cpc": 1.988462,
             "roas": 0.0,
             "revenue": 0
           },
           "max": {
-            "spend": 103.37,
+            "spend": 103.4,
             "clicks": 52,
-            "impressions": 1501,
-            "ctr": 3.464357,
-            "cpc": 1.987885,
+            "impressions": 1502,
+            "ctr": 3.462051,
+            "cpc": 1.988462,
             "roas": 0.0,
             "revenue": 0
           }
         },
-        "status": "ACTIVE"
+        "status": "PAUSED"
       },
       {
         "name": "CBO - Dresses - Catalog",
@@ -395,11 +395,11 @@
             "revenue": 0
           },
           "30d": {
-            "spend": 5.2,
-            "clicks": 34,
-            "impressions": 458,
-            "ctr": 7.423581,
-            "cpc": 0.152941,
+            "spend": 0.97,
+            "clicks": 5,
+            "impressions": 68,
+            "ctr": 7.352941,
+            "cpc": 0.194,
             "roas": 0.0,
             "revenue": 0
           },
@@ -416,7 +416,7 @@
         "status": "PAUSED"
       }
     ],
-    "total_spend": 103.37,
+    "total_spend": 103.4,
     "total_roas": 0.0
   },
   "shopify": {
@@ -427,20 +427,20 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 32,
-    "users": 30,
-    "pageviews": 57,
+    "sessions": 39,
+    "users": 34,
+    "pageviews": 73,
     "channels": {
       "Paid Social": {
-        "sessions": 20,
-        "users": 20
+        "sessions": 22,
+        "users": 22
       },
       "Direct": {
-        "sessions": 7,
-        "users": 5
+        "sessions": 11,
+        "users": 7
       },
       "Unassigned": {
-        "sessions": 3,
+        "sessions": 4,
         "users": 3
       },
       "Organic Shopping": {
@@ -455,8 +455,18 @@
     "top_pages": [
       {
         "page": "/",
-        "views": 15,
-        "users": 5
+        "views": 21,
+        "users": 7
+      },
+      {
+        "page": "/products/calanthe-maxi-dress-plum",
+        "views": 6,
+        "users": 2
+      },
+      {
+        "page": "/products/alana-mini-dress-wine",
+        "views": 4,
+        "users": 3
       },
       {
         "page": "/products/rosetta-maxi-dress-blush",
@@ -467,16 +477,6 @@
         "page": "/collections/dresses",
         "views": 3,
         "users": 2
-      },
-      {
-        "page": "/products/maliyah-maxi-dress-red",
-        "views": 3,
-        "users": 2
-      },
-      {
-        "page": "/products/the-lexi-suede-bomber-jacket-luxury-camel-cropped-racing-coat",
-        "views": 3,
-        "users": 3
       }
     ]
   },
