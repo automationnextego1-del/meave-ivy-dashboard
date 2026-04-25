@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-24T08:30:01.186692",
+  "updated_at": "2026-04-25T08:30:00.516562",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -395,12 +395,12 @@
             "revenue": 0
           },
           "30d": {
-            "spend": 0.97,
-            "clicks": 5,
-            "impressions": 68,
-            "ctr": 7.352941,
-            "cpc": 0.194,
-            "roas": 0.0,
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
             "revenue": 0
           },
           "max": {
@@ -429,19 +429,15 @@
   "ga4": {
     "sessions": 39,
     "users": 34,
-    "pageviews": 73,
+    "pageviews": 76,
     "channels": {
       "Paid Social": {
         "sessions": 22,
         "users": 22
       },
       "Direct": {
-        "sessions": 11,
-        "users": 7
-      },
-      "Unassigned": {
-        "sessions": 4,
-        "users": 3
+        "sessions": 14,
+        "users": 9
       },
       "Organic Shopping": {
         "sessions": 1,
@@ -450,13 +446,17 @@
       "Organic Social": {
         "sessions": 1,
         "users": 1
+      },
+      "Unassigned": {
+        "sessions": 1,
+        "users": 1
       }
     },
     "top_pages": [
       {
         "page": "/",
-        "views": 21,
-        "users": 7
+        "views": 23,
+        "users": 9
       },
       {
         "page": "/products/calanthe-maxi-dress-plum",
@@ -481,8 +481,8 @@
     ]
   },
   "knowledge": {
-    "last_updated": "2026-04-21",
-    "topics": 10
+    "last_updated": "2026-04-25",
+    "topics": 0
   },
   "products": {
     "recommendations": [
@@ -572,6 +572,6 @@
         "expires_at": "2026-05-05T16:33:26.787532"
       }
     ],
-    "last_updated": "2026-04-21T16:33:26.787534"
+    "last_updated": "2026-04-24T10:00:58.475467"
   }
 }
