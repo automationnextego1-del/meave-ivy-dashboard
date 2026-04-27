@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T08:30:01.371270",
+  "updated_at": "2026-04-27T08:30:00.803108",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -427,17 +427,21 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 45,
-    "users": 39,
-    "pageviews": 92,
+    "sessions": 48,
+    "users": 42,
+    "pageviews": 96,
     "channels": {
       "Paid Social": {
         "sessions": 22,
         "users": 22
       },
       "Direct": {
-        "sessions": 17,
-        "users": 11
+        "sessions": 20,
+        "users": 14
+      },
+      "Unassigned": {
+        "sessions": 3,
+        "users": 3
       },
       "Organic Search": {
         "sessions": 1,
@@ -450,17 +454,13 @@
       "Organic Social": {
         "sessions": 1,
         "users": 1
-      },
-      "Unassigned": {
-        "sessions": 3,
-        "users": 3
       }
     },
     "top_pages": [
       {
         "page": "/",
-        "views": 28,
-        "users": 11
+        "views": 30,
+        "users": 13
       },
       {
         "page": "/products/calanthe-maxi-dress-plum",
@@ -473,20 +473,20 @@
         "users": 4
       },
       {
+        "page": "/collections/dresses/products/francis-maxi-dress-cherry-lacquer",
+        "views": 4,
+        "users": 1
+      },
+      {
         "page": "/products/alana-mini-dress-wine",
         "views": 4,
         "users": 3
-      },
-      {
-        "page": "/products/rosetta-maxi-dress-blush",
-        "views": 4,
-        "users": 2
       }
     ]
   },
   "knowledge": {
-    "last_updated": "2026-04-26",
-    "topics": 0
+    "last_updated": "2026-04-27",
+    "topics": 10
   },
   "products": {
     "recommendations": [
