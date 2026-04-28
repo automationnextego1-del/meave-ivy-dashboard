@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T08:30:00.803108",
+  "updated_at": "2026-04-28T08:30:00.481707",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -132,11 +132,11 @@
             "revenue": 0
           },
           "7d": {
-            "spend": 103.4,
-            "clicks": 52,
-            "impressions": 1502,
-            "ctr": 3.462051,
-            "cpc": 1.988462,
+            "spend": 74.07,
+            "clicks": 39,
+            "impressions": 978,
+            "ctr": 3.98773,
+            "cpc": 1.899231,
             "roas": 0.0,
             "revenue": 0
           },
@@ -327,11 +327,11 @@
             "revenue": 0
           },
           "30d": {
-            "spend": 50.92,
-            "clicks": 78,
-            "impressions": 2043,
-            "ctr": 3.817915,
-            "cpc": 0.652821,
+            "spend": 42.62,
+            "clicks": 65,
+            "impressions": 1641,
+            "ctr": 3.960999,
+            "cpc": 0.655692,
             "roas": 0.0,
             "revenue": 0
           },
@@ -427,8 +427,8 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 48,
-    "users": 42,
+    "sessions": 47,
+    "users": 41,
     "pageviews": 96,
     "channels": {
       "Paid Social": {
@@ -440,8 +440,8 @@
         "users": 14
       },
       "Unassigned": {
-        "sessions": 3,
-        "users": 3
+        "sessions": 2,
+        "users": 2
       },
       "Organic Search": {
         "sessions": 1,
