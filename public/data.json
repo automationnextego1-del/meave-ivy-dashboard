@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T08:30:00.481707",
+  "updated_at": "2026-04-29T08:30:00.530984",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -132,11 +132,11 @@
             "revenue": 0
           },
           "7d": {
-            "spend": 74.07,
-            "clicks": 39,
-            "impressions": 978,
-            "ctr": 3.98773,
-            "cpc": 1.899231,
+            "spend": 35.7,
+            "clicks": 24,
+            "impressions": 476,
+            "ctr": 5.042017,
+            "cpc": 1.4875,
             "roas": 0.0,
             "revenue": 0
           },
@@ -327,11 +327,11 @@
             "revenue": 0
           },
           "30d": {
-            "spend": 42.62,
-            "clicks": 65,
-            "impressions": 1641,
-            "ctr": 3.960999,
-            "cpc": 0.655692,
+            "spend": 28.52,
+            "clicks": 35,
+            "impressions": 993,
+            "ctr": 3.524673,
+            "cpc": 0.814857,
             "roas": 0.0,
             "revenue": 0
           },
@@ -427,27 +427,19 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 47,
-    "users": 41,
-    "pageviews": 96,
+    "sessions": 30,
+    "users": 27,
+    "pageviews": 61,
     "channels": {
       "Paid Social": {
-        "sessions": 22,
-        "users": 22
-      },
-      "Direct": {
-        "sessions": 20,
+        "sessions": 14,
         "users": 14
       },
-      "Unassigned": {
-        "sessions": 2,
-        "users": 2
+      "Direct": {
+        "sessions": 14,
+        "users": 11
       },
       "Organic Search": {
-        "sessions": 1,
-        "users": 1
-      },
-      "Organic Shopping": {
         "sessions": 1,
         "users": 1
       },
@@ -459,18 +451,18 @@
     "top_pages": [
       {
         "page": "/",
-        "views": 30,
-        "users": 13
+        "views": 16,
+        "users": 10
       },
       {
         "page": "/products/calanthe-maxi-dress-plum",
-        "views": 6,
+        "views": 5,
         "users": 2
       },
       {
         "page": "/collections/dresses",
-        "views": 5,
-        "users": 4
+        "views": 4,
+        "users": 3
       },
       {
         "page": "/collections/dresses/products/francis-maxi-dress-cherry-lacquer",
@@ -478,9 +470,9 @@
         "users": 1
       },
       {
-        "page": "/products/alana-mini-dress-wine",
+        "page": "/products/rosetta-maxi-dress-blush",
         "views": 4,
-        "users": 3
+        "users": 2
       }
     ]
   },
