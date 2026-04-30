@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T08:30:00.530984",
+  "updated_at": "2026-04-30T08:30:00.824610",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -132,12 +132,12 @@
             "revenue": 0
           },
           "7d": {
-            "spend": 35.7,
-            "clicks": 24,
-            "impressions": 476,
-            "ctr": 5.042017,
-            "cpc": 1.4875,
-            "roas": 0.0,
+            "spend": 0.0,
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0.0,
+            "cpc": 0.0,
+            "roas": 0,
             "revenue": 0
           },
           "30d": {
@@ -327,11 +327,11 @@
             "revenue": 0
           },
           "30d": {
-            "spend": 28.52,
-            "clicks": 35,
-            "impressions": 993,
-            "ctr": 3.524673,
-            "cpc": 0.814857,
+            "spend": 14.85,
+            "clicks": 20,
+            "impressions": 473,
+            "ctr": 4.22833,
+            "cpc": 0.7425,
             "roas": 0.0,
             "revenue": 0
           },
@@ -427,14 +427,10 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 30,
-    "users": 27,
-    "pageviews": 61,
+    "sessions": 16,
+    "users": 13,
+    "pageviews": 39,
     "channels": {
-      "Paid Social": {
-        "sessions": 14,
-        "users": 14
-      },
       "Direct": {
         "sessions": 14,
         "users": 11
@@ -451,8 +447,8 @@
     "top_pages": [
       {
         "page": "/",
-        "views": 16,
-        "users": 10
+        "views": 17,
+        "users": 11
       },
       {
         "page": "/products/calanthe-maxi-dress-plum",
@@ -460,18 +456,18 @@
         "users": 2
       },
       {
-        "page": "/collections/dresses",
-        "views": 4,
-        "users": 3
-      },
-      {
         "page": "/collections/dresses/products/francis-maxi-dress-cherry-lacquer",
         "views": 4,
         "users": 1
       },
       {
-        "page": "/products/rosetta-maxi-dress-blush",
-        "views": 4,
+        "page": "/collections/dresses",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "page": "/policies/privacy-policy",
+        "views": 2,
         "users": 2
       }
     ]
