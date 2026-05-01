@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-30T08:30:00.824610",
+  "updated_at": "2026-05-01T08:30:00.568262",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -427,12 +427,12 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 16,
-    "users": 13,
-    "pageviews": 39,
+    "sessions": 15,
+    "users": 15,
+    "pageviews": 30,
     "channels": {
       "Direct": {
-        "sessions": 14,
+        "sessions": 11,
         "users": 11
       },
       "Organic Search": {
@@ -442,18 +442,17 @@
       "Organic Social": {
         "sessions": 1,
         "users": 1
+      },
+      "Unassigned": {
+        "sessions": 2,
+        "users": 2
       }
     },
     "top_pages": [
       {
         "page": "/",
-        "views": 17,
+        "views": 14,
         "users": 11
-      },
-      {
-        "page": "/products/calanthe-maxi-dress-plum",
-        "views": 5,
-        "users": 2
       },
       {
         "page": "/collections/dresses/products/francis-maxi-dress-cherry-lacquer",
@@ -469,6 +468,11 @@
         "page": "/policies/privacy-policy",
         "views": 2,
         "users": 2
+      },
+      {
+        "page": "/products/francis-maxi-dress-cherry-lacquer",
+        "views": 2,
+        "users": 1
       }
     ]
   },
