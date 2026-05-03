@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T08:30:00.911786",
+  "updated_at": "2026-05-03T08:30:00.651085",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -427,27 +427,27 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 26,
-    "users": 25,
-    "pageviews": 48,
+    "sessions": 51,
+    "users": 36,
+    "pageviews": 140,
     "channels": {
       "Direct": {
-        "sessions": 20,
-        "users": 19
+        "sessions": 35,
+        "users": 27
       },
       "Unassigned": {
-        "sessions": 3,
-        "users": 3
-      },
-      "Organic Search": {
-        "sessions": 1,
-        "users": 1
+        "sessions": 8,
+        "users": 4
       },
       "Organic Shopping": {
-        "sessions": 1,
-        "users": 1
+        "sessions": 5,
+        "users": 2
       },
       "Organic Social": {
+        "sessions": 2,
+        "users": 2
+      },
+      "Organic Search": {
         "sessions": 1,
         "users": 1
       }
@@ -455,28 +455,28 @@
     "top_pages": [
       {
         "page": "/",
-        "views": 24,
-        "users": 17
+        "views": 53,
+        "users": 25
       },
       {
         "page": "/products/the-margaux-striped-co-ord-set",
+        "views": 46,
+        "users": 7
+      },
+      {
+        "page": "/collections/shoes",
+        "views": 8,
+        "users": 1
+      },
+      {
+        "page": "/collections/all",
         "views": 5,
         "users": 3
       },
       {
-        "page": "/collections/dresses/products/francis-maxi-dress-cherry-lacquer",
+        "page": "/collections/shoes/Loafers",
         "views": 4,
         "users": 1
-      },
-      {
-        "page": "/collections/dresses",
-        "views": 2,
-        "users": 2
-      },
-      {
-        "page": "/policies/privacy-policy",
-        "views": 2,
-        "users": 2
       }
     ]
   },
