@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-03T08:30:00.651085",
+  "updated_at": "2026-05-04T08:30:01.167742",
   "meta": {
     "spend": 103.4,
     "ctr": 0.0,
@@ -427,23 +427,23 @@
     "top_products": []
   },
   "ga4": {
-    "sessions": 51,
+    "sessions": 49,
     "users": 36,
-    "pageviews": 140,
+    "pageviews": 154,
     "channels": {
       "Direct": {
-        "sessions": 35,
-        "users": 27
-      },
-      "Unassigned": {
-        "sessions": 8,
-        "users": 4
+        "sessions": 38,
+        "users": 29
       },
       "Organic Shopping": {
-        "sessions": 5,
+        "sessions": 6,
         "users": 2
       },
       "Organic Social": {
+        "sessions": 2,
+        "users": 2
+      },
+      "Unassigned": {
         "sessions": 2,
         "users": 2
       },
@@ -455,13 +455,13 @@
     "top_pages": [
       {
         "page": "/",
-        "views": 53,
-        "users": 25
+        "views": 58,
+        "users": 28
       },
       {
         "page": "/products/the-margaux-striped-co-ord-set",
-        "views": 46,
-        "users": 7
+        "views": 52,
+        "users": 8
       },
       {
         "page": "/collections/shoes",
@@ -475,13 +475,13 @@
       },
       {
         "page": "/collections/shoes/Loafers",
-        "views": 4,
+        "views": 5,
         "users": 1
       }
     ]
   },
   "knowledge": {
-    "last_updated": "2026-04-27",
+    "last_updated": "2026-05-04",
     "topics": 10
   },
   "products": {
